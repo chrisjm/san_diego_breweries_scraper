@@ -1,0 +1,35 @@
+AllCops:
+  TargetRubyVersion: 2.2
+  Include:
+    - Rakefile
+    - config.ru
+  Exclude:
+    - config/**
+    - db/**/*
+    - Gemfile
+    - script/**
+
+Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 35
+
+Metrics/LineLength:
+  Max: 100
+  Exclude:
+    - features/step_definitions/*
+    - spec/*
+
+Metrics/AbcSize:
+  Enabled: false
+
+BlockLength:
+  Max: 70
